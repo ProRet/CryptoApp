@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace CryptoApp.ViewModel.ViewModels
 {
-    public class TopCryptocurrenciesModel
+    public class TopCryptocurrenciesViewModel
     {
         public ObservableCollection<CryptoCoin> CryptoCoins { get; set; }
-        public TopCryptocurrenciesModel()
+        public TopCryptocurrenciesViewModel()
         {
             CryptoCoins = new ObservableCollection<CryptoCoin>();
         }
-        public TopCryptocurrenciesModel(ObservableCollection<CryptoCoin> cryptoCoins)
+        public TopCryptocurrenciesViewModel(ObservableCollection<CryptoCoin> cryptoCoins)
         {
             CryptoCoins = cryptoCoins;
         }   
