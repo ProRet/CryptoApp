@@ -11,7 +11,7 @@ namespace CryptoApp.ViewModel.ViewModels
 {
     public class TopCryptocurrenciesViewModel
     {
-        public ObservableCollection<CryptoCoin> CryptoCoins { get; } = new ObservableCollection<CryptoCoin>();
+        public ObservableCollection<CryptoCoin> CryptoCoins { get; } = new ObservableCollection<CryptoCoin>(CoinCapService.Instance.GetCryptoCoinsAsync(10));
         
 
     }
