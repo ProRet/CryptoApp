@@ -31,17 +31,5 @@ namespace CryptoApp.Views
             InitializeComponent();
            
         }
-
-        public async Task Do()
-        {
-            var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets?limit=2");
-            var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
-            var json = await response.Content.ReadAsStringAsync();
-            var root = JObject.Parse(json);
-            var a = root["data"][0];
-            Console.WriteLine(a["id"]);
-        }
     }
 }

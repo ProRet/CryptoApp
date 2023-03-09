@@ -49,5 +49,10 @@ namespace CryptoApp.Services
             }
             return cryptoCoins;
         }
+
+        private static readonly Lazy<CoinCapService> coinCapService = new Lazy<CoinCapService>(() => new CoinCapService());
+
+        public static CoinCapService Instance { get { return coinCapService.Value; } }
+        
     }
 }
