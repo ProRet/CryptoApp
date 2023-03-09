@@ -10,8 +10,7 @@ namespace CryptoApp.ViewModel.ViewModels
         public ObservableCollection<CryptoCoin> CryptoCoins { get; } = new ObservableCollection<CryptoCoin>();
 
        public TopCryptocurrenciesViewModel()
-        {
-            
+        {  
             CryptoCoins.FillCryptoCoins();
             
         }
