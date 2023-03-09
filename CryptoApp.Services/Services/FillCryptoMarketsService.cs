@@ -17,5 +17,6 @@ namespace CryptoApp.Services.Services
 
             cryptoCoins.AddRange(cryptocurrencies);
         }
+
     }
 }
