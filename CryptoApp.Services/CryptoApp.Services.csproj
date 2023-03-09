@@ -120,10 +120,11 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ObservableCollectionExtention.cs" />
     <Compile Include="Services\CoinCapService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\FillCryptoMarkets.cs" />
-    <Compile Include="Services\FillTopCryptoCurrencies.cs" />
+    <Compile Include="Services\FillCryptoMarketsService.cs" />
+    <Compile Include="Services\FillTopCryptoCurrenciesService.cs" />
     <EmbeddedResource Include="Properties\CryptoApp.Services.rd.xml" />
   </ItemGroup>
   <ItemGroup>

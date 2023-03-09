@@ -1,4 +1,5 @@
 ﻿using CryptoApp.Models;
+using CryptoApp.ViewModel.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace CryptoApp.Services.Services
 {
-    public class FillTopCryptoCurrencies
+    public static class FillTopCryptoCurrenciesService
     {
-        private async Task FillCryptoCollection(this ObservableCollection<CryptoCoin> cryptoCoins)
+        private static async Task FillTopCryptoCurrencies(this ObservableCollection<CryptoCoin> cryptoCoins)
         {
             var cryptocurrencies = await CoinCapService.Instance.GetCryptoCoinsAsync(10);
 
