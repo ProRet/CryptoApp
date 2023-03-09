@@ -7,7 +7,7 @@ namespace CryptoApp.Extentions.Extensions
 {
     public static class CryptoCoinsExtension
     {
-        public static async Task FillCryptoCoins(this ObservableCollection<CryptoCoin> cryptoCoins)
+        public static async void FillCryptoCoins(this ObservableCollection<CryptoCoin> cryptoCoins)
         {
             var cryptocurrencies = await CoinCapService.Instance.GetCryptoCoinsAsync(10);
 

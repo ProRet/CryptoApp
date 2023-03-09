@@ -1,7 +1,7 @@
 ﻿using CryptoApp.Models;
 using System.Collections.ObjectModel;
 using CryptoApp.Extentions.Extensions;
-using System.Threading;
+
 
 namespace CryptoApp.ViewModel.ViewModels
 {
@@ -12,7 +12,6 @@ namespace CryptoApp.ViewModel.ViewModels
        public TopCryptocurrenciesViewModel()
         {  
             CryptoCoins.FillCryptoCoins();
-            
         }
     }
 }
