@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +29,19 @@ namespace CryptoApp.Views
         public TopCryptocurrenciesPage()
         {
             InitializeComponent();
+           
+        }
+
+        public async Task Do()
+        {
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets?limit=2");
+            var response = await client.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            var json = await response.Content.ReadAsStringAsync();
+            var root = JObject.Parse(json);
+            var a = root["data"][0];
+            Console.WriteLine(a["id"]);
         }
     }
 }

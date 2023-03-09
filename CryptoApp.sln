@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoApp.NavigationBehavio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoApp.Helpers", "CryptoApp.Helpers\CryptoApp.Helpers.csproj", "{E9F3985A-F374-4D97-AD34-01BE57E836A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoApp.Services", "CryptoApp.Services\CryptoApp.Services.csproj", "{D98A1191-0601-4F64-A036-3718BCEBC823}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,26 @@ Global
 		{E9F3985A-F374-4D97-AD34-01BE57E836A5}.Release|x64.Build.0 = Release|x64
 		{E9F3985A-F374-4D97-AD34-01BE57E836A5}.Release|x86.ActiveCfg = Release|x86
 		{E9F3985A-F374-4D97-AD34-01BE57E836A5}.Release|x86.Build.0 = Release|x86
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|ARM.Build.0 = Debug|ARM
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|ARM64.Build.0 = Debug|ARM64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|x64.ActiveCfg = Debug|x64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|x64.Build.0 = Debug|x64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|x86.ActiveCfg = Debug|x86
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Debug|x86.Build.0 = Debug|x86
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|ARM.ActiveCfg = Release|ARM
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|ARM.Build.0 = Release|ARM
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|ARM64.ActiveCfg = Release|ARM64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|ARM64.Build.0 = Release|ARM64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|x64.ActiveCfg = Release|x64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|x64.Build.0 = Release|x64
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|x86.ActiveCfg = Release|x86
+		{D98A1191-0601-4F64-A036-3718BCEBC823}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

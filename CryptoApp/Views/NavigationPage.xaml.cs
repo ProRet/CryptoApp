@@ -29,7 +29,7 @@ namespace CryptoApp.Views
         public NavigationPage()
         {
             InitializeComponent();
-            RootPageViewModel.Initialize(shellFrame, navigationView, KeyboardAccelerators);
+            RootPageViewModel.Initialize(navigationFrame, navigationView, KeyboardAccelerators);
         }
     }
 }

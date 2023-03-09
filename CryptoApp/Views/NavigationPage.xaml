@@ -23,12 +23,13 @@
         IsBackButtonVisible="Visible"
         IsBackEnabled="{x:Bind RootPageViewModel.IsBackEnabled, Mode=OneWay}"
         SelectedItem="{x:Bind RootPageViewModel.Selected, Mode=OneWay}"
-        IsSettingsVisible="True">
+        IsSettingsVisible="True"
+        Background="Black">
 
         <winui:NavigationView.MenuItems>
-            <winui:NavigationViewItem Content="Top cryptocurrencies" Foreground="Black"  helpers:NavHelper.NavigateTo="local:TopCryptocurrenciesPage"/>
-            <winui:NavigationViewItem Content="Search" Foreground="Black"  helpers:NavHelper.NavigateTo="local:SearchPage" />
-            <winui:NavigationViewItem Content="Crypto info" Foreground="Black"  helpers:NavHelper.NavigateTo="local:CryptoInfoPage" />
+            <winui:NavigationViewItem Icon="Home" Content="Top cryptocurrencies" Foreground="White"  helpers:NavHelper.NavigateTo="local:TopCryptocurrenciesPage"/>
+            <winui:NavigationViewItem Icon="Zoom" Content="Search" Foreground="White"  helpers:NavHelper.NavigateTo="local:SearchPage" />
+            <winui:NavigationViewItem  Content="Crypto info" Icon="Zoom" Foreground="White"  helpers:NavHelper.NavigateTo="local:CryptoInfoPage" />
         </winui:NavigationView.MenuItems>
 
         <i:Interaction.Behaviors>
@@ -37,7 +38,7 @@
             </ic:EventTriggerBehavior>
         </i:Interaction.Behaviors>
         <Grid>
-            <Frame x:Name="shellFrame" />
+            <Frame x:Name="navigationFrame" />
         </Grid>
     </winui:NavigationView>
 </Page>

@@ -6,9 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Coral">
 
-    <Grid>
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    </Grid>
+        <Button x:Name="loginButton" Content="Login" Margin="10"
+                RelativePanel.AlignTopWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"/>
+        <TextBox x:Name="loginBox" Margin="10"
+                 RelativePanel.LeftOf="loginButton"
+                 RelativePanel.AlignLeftWithPanel="True"
+        />
+    </RelativePanel>
+
 </Page>
