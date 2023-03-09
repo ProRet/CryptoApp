@@ -121,6 +121,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Models\CryptoCoin.cs" />
+    <Compile Include="Models\CryptoMarket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\CryptoApp.Models.rd.xml" />
   </ItemGroup>

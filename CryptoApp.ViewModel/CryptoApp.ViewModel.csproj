@@ -149,6 +149,10 @@
       <Project>{6a0e6d49-2c95-4f97-a4b4-0203617221fe}</Project>
       <Name>CryptoApp.NavigationBehavior</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CryptoApp.Services\CryptoApp.Services.csproj">
+      <Project>{D98A1191-0601-4F64-A036-3718BCEBC823}</Project>
+      <Name>CryptoApp.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
