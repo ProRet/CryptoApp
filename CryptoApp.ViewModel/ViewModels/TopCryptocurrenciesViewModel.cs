@@ -1,6 +1,7 @@
 ﻿using CryptoApp.Models;
 using CryptoApp.Services;
-using CryptoApp.ViewModel.Extensions;
+using CryptoApp.Services.Services;
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,5 +14,7 @@ namespace CryptoApp.ViewModel.ViewModels
     public class TopCryptocurrenciesViewModel
     {
         public ObservableCollection<CryptoCoin> CryptoCoins { get; } = new ObservableCollection<CryptoCoin>();
+
+       
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CryptoApp.ViewModel.Extensions
+namespace CryptoApp.Extentions.Extensions
 {
     public static class ObservableCollectionExtensions
     {
