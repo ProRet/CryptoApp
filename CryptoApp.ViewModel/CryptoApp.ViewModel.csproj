@@ -137,6 +137,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CryptoApp.Extentions\CryptoApp.Extensions.csproj">
+      <Project>{57adadf2-1b17-4cc4-af90-433d2a36da8a}</Project>
+      <Name>CryptoApp.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CryptoApp.Helpers\CryptoApp.Helpers.csproj">
       <Project>{e9f3985a-f374-4d97-ad34-01be57e836a5}</Project>
       <Name>CryptoApp.Helpers</Name>

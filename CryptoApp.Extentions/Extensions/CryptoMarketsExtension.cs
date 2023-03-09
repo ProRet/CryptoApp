@@ -7,7 +7,7 @@ namespace CryptoApp.Extentions.Extensions
 {
     public static class CryptoMarketsExtension
     {
-        private static async Task FillCryptoMarkets(this ObservableCollection<CryptoMarket> cryptoMarkets)
+        public static async Task FillCryptoMarkets(this ObservableCollection<CryptoMarket> cryptoMarkets)
         {
             var cryptomarkets = await CoinCapService.Instance.GetCryptoMarketsAsync("bitcoin");
 
