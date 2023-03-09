@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using CryptoApp.ViewModel.ViewModels;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,9 +27,12 @@ namespace CryptoApp.Views
     /// </summary>
     public sealed partial class TopCryptocurrenciesPage : Page
     {
+        TopCryptocurrenciesViewModel viewModel;
         public TopCryptocurrenciesPage()
         {
             InitializeComponent();
+
+            
            
         }
     }

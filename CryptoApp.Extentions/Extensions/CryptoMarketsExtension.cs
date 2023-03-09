@@ -1,22 +1,17 @@
-﻿using CryptoApp.Models;
+﻿using CryptoApp.Models.Models;
 using CryptoApp.Services;
-using CryptoApp.Extentions.Extensions;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CryptoApp.Extentions.Extensions
 {
     public static class CryptoMarketsExtension
     {
-        private static async Task FillCryptoMarkets(this ObservableCollection<CryptoCoin> cryptoCoins)
+        private static async Task FillCryptoMarkets(this ObservableCollection<CryptoMarket> cryptoMarkets)
         {
-            var cryptocurrencies = await CoinCapService.Instance.GetCryptoCoinsAsync(10);
+            var cryptocurrencies = await CoinCapService.Instance.GetCryptoCoinsAsync(1);
 
-            cryptoCoins.AddRange(cryptocurrencies);
+            cryptoMarkets.AddRange(cryptocurrencies);
         }
 
     }

@@ -1,14 +1,5 @@
 ﻿using CryptoApp.Models;
-using CryptoApp.Services;
-using CryptoApp.Services.Services;
-
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CryptoApp.ViewModel.ViewModels
 {
     public class TopCryptocurrenciesViewModel
