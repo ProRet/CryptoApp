@@ -12,7 +12,7 @@ namespace CryptoApp.Services
 {
     public class CoinCapService
     {
-        public static async Task<CryptoCoin[]> GetCryptoCoinAsync(int limit)
+        public static async Task<CryptoCoin[]> GetCryptoCoinsAsync(int limit)
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets?limit=" + limit);
