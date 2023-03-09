@@ -192,6 +192,10 @@
       <Project>{e9f3985a-f374-4d97-ad34-01be57e836a5}</Project>
       <Name>CryptoApp.Helpers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CryptoApp.Models\CryptoApp.Models.csproj">
+      <Project>{F727E6AF-78BE-4608-91B3-F0799753846B}</Project>
+      <Name>CryptoApp.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CryptoApp.NavigationBehavior\CryptoApp.NavigationBehavior.csproj">
       <Project>{6a0e6d49-2c95-4f97-a4b4-0203617221fe}</Project>
       <Name>CryptoApp.NavigationBehavior</Name>
