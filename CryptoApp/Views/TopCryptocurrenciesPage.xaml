@@ -78,7 +78,6 @@
             </Grid>
             <Grid Grid.Row="1">
                
-
                 <ListView ItemsSource="{x:Bind viewModel.CryptoCoins}">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
@@ -90,33 +89,29 @@
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="models:CryptoCoin">
                             <Grid>
-
-                                <Grid Grid.Row="1" Grid.Column="0">
-                                    <TextBlock Text="{x:Bind Rank}"></TextBlock>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.1*"/>
+                                    <ColumnDefinition Width="0.1*"/>
+                                    <ColumnDefinition Width="0.1*"/>
+                                    <ColumnDefinition Width="0.1*"/>
+                                    <ColumnDefinition Width="0.1*"/>
+                                    <ColumnDefinition Width="0.15*"/>
+                                    <ColumnDefinition Width="0.1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Text="{Binding Rank}"></TextBlock>
+                                <TextBlock  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Text="{Binding Symbol}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Text="{Binding Name}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Text="{Binding Supply}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Text="{Binding MaxSupply}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Text="{Binding VolumeUsd24Hr}"></TextBlock>
+                                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6" Text="{Binding PriceUsd}"></TextBlock>
                                 </Grid>
-                                <Grid Grid.Row="1" Grid.Column="1" >
-                                    <TextBlock Text="{x:Bind Symbol}"></TextBlock>
-                                </Grid>
-                                <Grid Grid.Row="1" Grid.Column="2">
-                                    <TextBlock Text="{x:Bind Name}"></TextBlock>
-                                </Grid>
-                                <Grid Grid.Row="1" Grid.Column="3">
-                                    <TextBlock Text="{x:Bind Supply}"></TextBlock>
-                                </Grid>
-                                <Grid Grid.Row="1" Grid.Column="4">
-                                    <TextBlock Text="{x:Bind MaxSupply}"></TextBlock>
-                                </Grid>
-                                <Grid Grid.Row="1" Grid.Column="5">
-                                    <TextBlock Text="{x:Bind VolumeUsd24Hr}"></TextBlock>
-                                </Grid>
-                                <Grid Grid.Row="1" Grid.Column="6">
-                                    <TextBlock Text="{x:Bind PriceUsd}"></TextBlock>
-                                </Grid>
-                            </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                
             </Grid>
         </Grid>
+        
     </Grid>
 </Page>
