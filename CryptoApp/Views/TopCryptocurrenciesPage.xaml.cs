@@ -27,11 +27,11 @@ namespace CryptoApp.Views
     /// </summary>
     public sealed partial class TopCryptocurrenciesPage : Page
     {
-        readonly TopCryptocurrenciesViewModel viewModel = new();
+        readonly TopCryptocurrenciesViewModel viewModel = new TopCryptocurrenciesViewModel();
         public TopCryptocurrenciesPage()
         {
             InitializeComponent();
-            DataContext = viewModel.CryptoCoins;
+            
         }
     }
 }

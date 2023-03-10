@@ -5,15 +5,18 @@
     xmlns:local="using:CryptoApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:CryptoApp.ViewModel.ViewModels"
     mc:Ignorable="d"
     Background="Coral">
-
+    <Page.DataContext>
+        <vm:TopCryptocurrenciesViewModel/>
+    </Page.DataContext>
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Button x:Name="loginButton" Content="Login" Margin="10"
                 RelativePanel.AlignTopWithPanel="True"
                 RelativePanel.AlignRightWithPanel="True"/>
-        <TextBox x:Name="loginBox" Margin="10"
+        <TextBox Text="{x:Bind viewModel.CryptoCoins}" x:Name="loginBox" Margin="10"
                  RelativePanel.LeftOf="loginButton"
                  RelativePanel.AlignLeftWithPanel="True"
         />

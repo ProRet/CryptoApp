@@ -1,7 +1,6 @@
 ﻿using CryptoApp.Models;
 using CryptoApp.Services;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 
 namespace CryptoApp.Extentions.Extensions
 {
