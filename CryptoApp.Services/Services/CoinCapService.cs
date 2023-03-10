@@ -46,7 +46,7 @@ namespace CryptoApp.Services
                 double vwap24Hr = (double)obj.SelectToken("vwap24Hr");
 
                 cryptoCoins[i] = new CryptoCoin(id, rank, symbol, name,
-                supply, maxSupply, marketCapUsd, volumeUsd24Hr, priceUsd, changePercent24Hr, vwap24Hr);
+                supply, maxSupply, marketCapUsd, volumeUsd24Hr, Math.Round(priceUsd,2), changePercent24Hr, vwap24Hr);
             }
             return cryptoCoins;
         }
