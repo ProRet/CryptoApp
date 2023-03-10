@@ -7,19 +7,72 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:CryptoApp.ViewModel.ViewModels"
     mc:Ignorable="d"
-    Background="Coral">
-    <Page.DataContext>
-        <vm:TopCryptocurrenciesViewModel/>
-    </Page.DataContext>
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <Button x:Name="loginButton" Content="Login" Margin="10"
-                RelativePanel.AlignTopWithPanel="True"
-                RelativePanel.AlignRightWithPanel="True"/>
-        <TextBox Text="{x:Bind viewModel.CryptoCoins}" x:Name="loginBox" Margin="10"
-                 RelativePanel.LeftOf="loginButton"
-                 RelativePanel.AlignLeftWithPanel="True"
-        />
-    </RelativePanel>
-
+    Background="Orange">
+    
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.15*"/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Rank
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Symbol
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Name
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Supply
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="4">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Max supply
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="5">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Volume usd for 24 hr
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="6">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Price usd
+                    </TextBlock>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
 </Page>
