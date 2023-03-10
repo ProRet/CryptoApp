@@ -9,6 +9,10 @@ namespace CryptoApp.Services
 {
     public class CoinCapService
     {
+
+        private static readonly Lazy<CoinCapService> coinCapService = new Lazy<CoinCapService>(() => new CoinCapService());
+
+        public static CoinCapService Instance { get { return coinCapService.Value; } }
         public async Task<CryptoCoin[]> GetCryptoCoinsAsync(int limit)
         {
             var client = new HttpClient();
@@ -73,9 +77,7 @@ namespace CryptoApp.Services
             return cryptoMarkets;
         }
 
-        private static readonly Lazy<CoinCapService> coinCapService = new Lazy<CoinCapService>(() => new CoinCapService());
-
-        public static CoinCapService Instance { get { return coinCapService.Value; } }
+        
         
     }
 }
