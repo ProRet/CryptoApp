@@ -6,72 +6,106 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:CryptoApp.ViewModel.ViewModels"
+    xmlns:models="using:CryptoApp.Models" 
     mc:Ignorable="d"
     Background="Orange">
-    
+
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.1*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.1*"/>
-                <ColumnDefinition Width="0.1*"/>
-                <ColumnDefinition Width="0.1*"/>
-                <ColumnDefinition Width="0.1*"/>
-                <ColumnDefinition Width="0.1*"/>
-                <ColumnDefinition Width="0.15*"/>
-                <ColumnDefinition Width="0.1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Row="0" Grid.Column="0">
-                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    Rank
-                    </TextBlock>
-                </Border>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                            Rank
+                        </TextBlock>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                            Symbol
+                        </TextBlock>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                            Name
+                        </TextBlock>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                            Supply
+                        </TextBlock>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                           Max supply
+                        </TextBlock>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                            Volume usd 24 hr
+                        </TextBlock>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="6">
+                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                            Price usd
+                        </TextBlock>
+                    </Border>
+                </Grid>
             </Grid>
-            <Grid Grid.Row="0" Grid.Column="1">
-                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    Symbol
-                    </TextBlock>
-                </Border>
-            </Grid>
-            <Grid Grid.Row="0" Grid.Column="2">
-                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    Name
-                    </TextBlock>
-                </Border>
-            </Grid>
-            <Grid Grid.Row="0" Grid.Column="3">
-                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    Supply
-                    </TextBlock>
-                </Border>
-            </Grid>
-            <Grid Grid.Row="0" Grid.Column="4">
-                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    Max supply
-                    </TextBlock>
-                </Border>
-            </Grid>
-            <Grid Grid.Row="0" Grid.Column="5">
-                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    Volume usd for 24 hr
-                    </TextBlock>
-                </Border>
-            </Grid>
-            <Grid Grid.Row="0" Grid.Column="6">
-                <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                    Price usd
-                    </TextBlock>
-                </Border>
+            <Grid Grid.Row="1">
+                <Grid>
+                    <ListView ItemsSource="{x:Bind viewModel.CryptoCoins}">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="IsHitTestVisible" Value="False"/>
+                                <Setter Property="BorderBrush" Value="Gray"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="models:CryptoCoin">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.1*"/>
+                                        <ColumnDefinition Width="0.1*"/>
+                                        <ColumnDefinition Width="0.1*"/>
+                                        <ColumnDefinition Width="0.1*"/>
+                                        <ColumnDefinition Width="0.1*"/>
+                                        <ColumnDefinition Width="0.15*"/>
+                                        <ColumnDefinition Width="0.1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                     
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>
