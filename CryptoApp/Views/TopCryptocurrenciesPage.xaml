@@ -18,61 +18,32 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.1*"/>
-                    <ColumnDefinition Width="0.1*"/>
-                    <ColumnDefinition Width="0.1*"/>
-                    <ColumnDefinition Width="0.15*"/>
-                    <ColumnDefinition Width="0.15*"/>
-                    <ColumnDefinition Width="0.15*"/>
-                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                 
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0">
                     <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                            Rank
+                        <TextBlock Text="Rank" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                            
                         </TextBlock>
                     </Border>
                 </Grid>
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                            Symbol
-                        </TextBlock>
+                        <TextBlock Text="Symbol" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                     </Border>
                 </Grid>
                 <Grid Grid.Row="0" Grid.Column="2">
                     <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                            Name
-                        </TextBlock>
-                    </Border>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="3">
-                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                            Supply
-                        </TextBlock>
-                    </Border>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="4">
-                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                           Max supply
-                        </TextBlock>
-                    </Border>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="5">
-                    <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                            Volume usd 24 hr
-                        </TextBlock>
+                        <TextBlock Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                     </Border>
                 </Grid>
                 <Grid Grid.Row="0" Grid.Column="6">
                     <Border BorderBrush="Black" BorderThickness="0 0 1 1">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                            Price usd
-                        </TextBlock>
+                        <TextBlock Text="Price usd" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                     </Border>
                 </Grid>
             </Grid>
@@ -89,21 +60,15 @@
                         <DataTemplate x:DataType="models:CryptoCoin">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="75"/>
-                                    <ColumnDefinition Width="65"/>
-                                    <ColumnDefinition Width="110"/>
-                                    <ColumnDefinition Width="120"/>
-                                    <ColumnDefinition Width="135"/>
                                     <ColumnDefinition Width="150"/>
-                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="180"/>
+                                    <ColumnDefinition Width="220"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Margin="0 20 0 20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Text="{Binding Rank}"></TextBlock>
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Text="{Binding Symbol}"></TextBlock>
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2" Text="{Binding Name}"></TextBlock>
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="3" Text="{Binding GetSupply}"></TextBlock>
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="4" Text="{Binding GetMaxSupply}"></TextBlock>
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="5" Text="{Binding GetVolumeUsd24Hr}"></TextBlock>
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="6" Text="{Binding PriceUsd}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Text="{Binding Symbol}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Text="{Binding Name}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6" Text="{Binding PriceUsd}"></TextBlock>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
