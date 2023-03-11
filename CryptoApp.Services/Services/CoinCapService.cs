@@ -64,14 +64,14 @@ namespace CryptoApp.Services
             var json = await response.Content.ReadAsStringAsync();
             var root = JObject.Parse(json)["data"][0];
             CryptoMarket cryptoMarkets = new CryptoMarket();
-                string exchangeId = (string)root["exchangeId"];
-                string baseId = (string)root["baseId"];
-                string quoteId = (string)root["quoteId"];
-                string baseSymbol = (string)root["baseSymbol"];
-                string quoteSymbol = (string)root["quoteSymbol"];
-                double volumeUsd24Hr = (double)root["volumeUsd24Hr"];
-                double priceUsd = (double)root["priceUsd"];
-                double volumePercent = (double)root["volumePercent"];
+                string exchangeId = (string)root.SelectToken("exchangeId");
+                string baseId = (string)root.SelectToken("baseId");
+                string quoteId = (string)root.SelectToken("quoteId");
+                string baseSymbol = (string)root.SelectToken("baseSymbol");
+                string quoteSymbol = (string)root.SelectToken("quoteSymbol");
+                double volumeUsd24Hr = (double)root.SelectToken("volumeUsd24Hr");
+                double priceUsd = (double)root.SelectToken("priceUsd");
+                double volumePercent = (double)root.SelectToken("volumePercent");
                 cryptoMarkets = new CryptoMarket(exchangeId,baseId,quoteId,baseSymbol,quoteSymbol,volumeUsd24Hr,priceUsd,volumePercent);
             return cryptoMarkets;
         }
