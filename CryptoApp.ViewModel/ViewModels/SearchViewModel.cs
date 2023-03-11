@@ -39,7 +39,7 @@ namespace CryptoApp.ViewModel.ViewModels
             {
                 FoundCoins.Clear();
                 name = value;
-
+                FoundCoins.SearchCoins(Name, CryptoCoins);
             }
         }
     }
