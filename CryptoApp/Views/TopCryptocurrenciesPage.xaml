@@ -91,19 +91,15 @@
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="93"/>
-                                    <ColumnDefinition Width="120"/>
-                                    <ColumnDefinition Width="0.1*"/>
-                                    <ColumnDefinition Width="0.1*"/>
-                                    <ColumnDefinition Width="0.1*"/>
-                                    <ColumnDefinition Width="0.15*"/>
-                                    <ColumnDefinition Width="0.1*"/>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="110"/>
+                                    <ColumnDefinition Width="130"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="100"/>
                                 </Grid.ColumnDefinitions>
-                                <Border BorderBrush="Black" BorderThickness="0 0 1 0">
-                                    <TextBlock Margin="10"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Text="{Binding Rank}"></TextBlock>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0 0 1 0">
-                                    <TextBlock Margin="10 0 -50 0"  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Text="{Binding Symbol}"></TextBlock>
-                                </Border>
+                                <TextBlock Margin="10"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Text="{Binding Rank}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Text="{Binding Symbol}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2" Text="{Binding Name}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="3" Text="{Binding Supply}"></TextBlock>
                                 <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="4" Text="{Binding MaxSupply}"></TextBlock>
