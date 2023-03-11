@@ -62,16 +62,16 @@ namespace CryptoApp.Services
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
-            var root = JObject.Parse(json)["data"];
+            var root = JObject.Parse(json)["data"][0];
             CryptoMarket cryptoMarkets = new CryptoMarket();
-                string exchangeId = (string)root[0]["exchangeId"];
-                string baseId = (string)root[0]["baseId"];
-                string quoteId = (string)root[0]["quoteId"];
-                string baseSymbol = (string)root[0]["baseSymbol"];
-                string quoteSymbol = (string)root[0]["quoteSymbol"];
-                double volumeUsd24Hr = (double)root[0]["volumeUsd24Hr"];
-                double priceUsd = (double)root[0]["priceUsd"];
-                double volumePercent = (double)root[0]["volumePercent"];
+                string exchangeId = (string)root["exchangeId"];
+                string baseId = (string)root["baseId"];
+                string quoteId = (string)root["quoteId"];
+                string baseSymbol = (string)root["baseSymbol"];
+                string quoteSymbol = (string)root["quoteSymbol"];
+                double volumeUsd24Hr = (double)root["volumeUsd24Hr"];
+                double priceUsd = (double)root["priceUsd"];
+                double volumePercent = (double)root["volumePercent"];
                 cryptoMarkets = new CryptoMarket(exchangeId,baseId,quoteId,baseSymbol,quoteSymbol,volumeUsd24Hr,priceUsd,volumePercent);
             return cryptoMarkets;
         }
