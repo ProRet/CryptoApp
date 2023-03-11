@@ -53,7 +53,7 @@ namespace CryptoApp.Services
             return cryptoCoins;
         }
 
-         public async Task<CryptoMarket[]> GetCryptoMarketsAsync(string coin)
+         public async Task<CryptoMarket> GetCryptoMarketsAsync(string coin)
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets/" + coin + "/markets");
@@ -63,7 +63,7 @@ namespace CryptoApp.Services
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
             var root = JObject.Parse(json)["data"];
-            CryptoMarket[] cryptoMarkets = new CryptoMarket[1];
+            CryptoMarket cryptoMarkets = new CryptoMarket();
                 string exchangeId = (string)root[0]["exchangeId"];
                 string baseId = (string)root[0]["baseId"];
                 string quoteId = (string)root[0]["quoteId"];
@@ -72,7 +72,7 @@ namespace CryptoApp.Services
                 double volumeUsd24Hr = (double)root[0]["volumeUsd24Hr"];
                 double priceUsd = (double)root[0]["priceUsd"];
                 double volumePercent = (double)root[0]["volumePercent"];
-                cryptoMarkets[0] = new CryptoMarket(exchangeId,baseId,quoteId,baseSymbol,quoteSymbol,volumeUsd24Hr,priceUsd,volumePercent);
+                cryptoMarkets = new CryptoMarket(exchangeId,baseId,quoteId,baseSymbol,quoteSymbol,volumeUsd24Hr,priceUsd,volumePercent);
             return cryptoMarkets;
         }
 
