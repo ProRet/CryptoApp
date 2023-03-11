@@ -56,7 +56,7 @@ namespace CryptoApp.Services
          public async Task<CryptoMarket> GetCryptoMarketsAsync(string coin)
         {
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets/" + coin + "/markets");
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets/" + coin + "/markets?limit=1");
             var content = new StringContent("", null, "text/plain");
             request.Content = content;
             var response = await client.SendAsync(request);

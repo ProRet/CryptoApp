@@ -6,11 +6,11 @@ namespace CryptoApp.ViewModel.ViewModels
 {
     public class SearchViewModel
     {
-        public ObservableCollection<CryptoCoin> cryptoCoins { get; }=new ObservableCollection<CryptoCoin>();
+        public ObservableCollection<CryptoCoin> CryptoCoins { get; }=new ObservableCollection<CryptoCoin>();
 
         public SearchViewModel()
         {
-            cryptoCoins.FillCryptoCoins();
+            CryptoCoins.FillCryptoCoins();
         }
     }
 }

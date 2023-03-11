@@ -32,7 +32,7 @@ namespace CryptoApp.Models
 
         public double VolumeUsd24Hr { get; set; }
 
-        public string GetVolumeUsd24Hr { get { return VolumeUsd24Hr.ToString(); } }
+        public string GetVolumeUsd24Hr => VolumeUsd24Hr.ToString();
 
         public double PriceUsd { get; set; }
 
