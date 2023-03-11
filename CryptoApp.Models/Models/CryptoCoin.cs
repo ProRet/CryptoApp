@@ -13,11 +13,26 @@ namespace CryptoApp.Models
 
         public double Supply { get; set; }
 
+        public string GetSupply
+        {
+            get { return Supply.ToString(); }
+        }
         public double MaxSupply { get; set; }
+
+        public string GetMaxSupply { get 
+            {  
+                if (MaxSupply == 0)
+                {
+                    return "No data";
+                }
+                return MaxSupply.ToString(); 
+            } }
 
         public double MarketCapUsd { get; set; }
 
         public double VolumeUsd24Hr { get; set; }
+
+        public string GetVolumeUsd24Hr { get { return VolumeUsd24Hr.ToString(); } }
 
         public double PriceUsd { get; set; }
 

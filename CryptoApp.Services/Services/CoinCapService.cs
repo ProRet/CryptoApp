@@ -30,6 +30,7 @@ namespace CryptoApp.Services
                 string symbol = (string)obj.SelectToken("symbol");
                 string name = (string)obj.SelectToken("name");
                 double supply = (double)obj.SelectToken("supply");
+                supply = Math.Round(supply);
                 double maxSupply;
                 if (obj.SelectToken("maxSupply").ToString() == "")
                 {
@@ -41,12 +42,13 @@ namespace CryptoApp.Services
                 }
                 double marketCapUsd = (double)obj.SelectToken("marketCapUsd");
                 double volumeUsd24Hr = (double)obj.SelectToken("volumeUsd24Hr");
+                volumeUsd24Hr = Math.Round(volumeUsd24Hr);
                 double priceUsd = (double)obj.SelectToken("priceUsd");
                 double changePercent24Hr = (double)obj.SelectToken("changePercent24Hr");
                 double vwap24Hr = (double)obj.SelectToken("vwap24Hr");
 
                 cryptoCoins[i] = new CryptoCoin(id, rank, symbol, name,
-                supply, maxSupply, marketCapUsd, volumeUsd24Hr, Math.Round(priceUsd,2), changePercent24Hr, vwap24Hr);
+                supply, maxSupply, marketCapUsd, volumeUsd24Hr, priceUsd, changePercent24Hr, vwap24Hr);
             }
             return cryptoCoins;
         }
