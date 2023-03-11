@@ -53,18 +53,18 @@ namespace CryptoApp.Services
             return cryptoCoins;
         }
 
-         public async Task<CryptoMarket[]> GetCryptoMarketsAsync(string coin)
+         public async Task<CryptoMarket[]> GetCryptoMarketsAsync(string coin, int limit)
         {
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets/" + coin + "/markets");
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets/" + coin + "/markets?limit="+limit);
             var content = new StringContent("", null, "text/plain");
             request.Content = content;
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
             var root = JObject.Parse(json)["data"];
-            CryptoMarket[] cryptoMarkets = new CryptoMarket[10];
-            for (int i = 0; i < 10; i++)
+            CryptoMarket[] cryptoMarkets = new CryptoMarket[limit];
+            for (int i = 0; i < limit; i++)
             {
                 string exchangeId = (string)root[i]["exchangeId"];
                 string baseId = (string)root[i]["baseId"];
