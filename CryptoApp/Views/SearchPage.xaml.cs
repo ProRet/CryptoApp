@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryptoApp.ViewModel.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,11 @@ namespace CryptoApp.Views
     /// </summary>
     public sealed partial class SearchPage : Page
     {
+        public SearchViewModel viewModel = new SearchViewModel();
         public SearchPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+
         }
     }
 }

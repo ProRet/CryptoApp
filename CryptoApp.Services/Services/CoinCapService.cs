@@ -45,10 +45,10 @@ namespace CryptoApp.Services
                 volumeUsd24Hr = Math.Round(volumeUsd24Hr);
                 double priceUsd = (double)obj.SelectToken("priceUsd");
                 double changePercent24Hr = (double)obj.SelectToken("changePercent24Hr");
-                double vwap24Hr = (double)obj.SelectToken("vwap24Hr");
+                
 
                 cryptoCoins[i] = new CryptoCoin(id, rank, symbol, name,
-                supply, maxSupply, marketCapUsd, volumeUsd24Hr, priceUsd, changePercent24Hr, vwap24Hr);
+                supply, maxSupply, marketCapUsd, volumeUsd24Hr, priceUsd, changePercent24Hr);
             }
             return cryptoCoins;
         }

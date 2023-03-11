@@ -38,12 +38,12 @@ namespace CryptoApp.Models
 
         public double ChangePercent24Hr { get; set; }
 
-        public double Vwap24Hr { get; set; }
+        
 
 
 
         public CryptoCoin() { }
-       public CryptoCoin(string id, int rank, string symbol, string name, double supply, double maxSupply, double marketCapUsd, double volumeUsd24Hr, double priceUsd, double changePercent24Hr, double vwap24Hr)
+       public CryptoCoin(string id, int rank, string symbol, string name, double supply, double maxSupply, double marketCapUsd, double volumeUsd24Hr, double priceUsd, double changePercent24Hr)
         {
             Id = id;
             Rank = rank;
@@ -55,7 +55,7 @@ namespace CryptoApp.Models
             VolumeUsd24Hr = volumeUsd24Hr;
             PriceUsd = priceUsd;
             ChangePercent24Hr = changePercent24Hr;
-            Vwap24Hr = vwap24Hr;
+            
         }
     }
 }
