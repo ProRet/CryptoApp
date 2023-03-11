@@ -13,7 +13,7 @@ namespace CryptoApp.Services
         private static readonly Lazy<CoinCapService> coinCapService = new Lazy<CoinCapService>(() => new CoinCapService());
 
         public static CoinCapService Instance { get { return coinCapService.Value; } }
-        public async Task<CryptoCoin[]> GetCryptoCoinsAsync(int limit)
+        public async Task<CryptoCoin[]> GetCryptoCoinsAsync(int limit=230)
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets?limit=" + limit);
@@ -53,29 +53,26 @@ namespace CryptoApp.Services
             return cryptoCoins;
         }
 
-         public async Task<CryptoMarket[]> GetCryptoMarketsAsync(string coin, int limit)
+         public async Task<CryptoMarket[]> GetCryptoMarketsAsync(string coin)
         {
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets/" + coin + "/markets?limit="+limit);
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.coincap.io/v2/assets/" + coin + "/markets");
             var content = new StringContent("", null, "text/plain");
             request.Content = content;
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
             var root = JObject.Parse(json)["data"];
-            CryptoMarket[] cryptoMarkets = new CryptoMarket[limit];
-            for (int i = 0; i < limit; i++)
-            {
-                string exchangeId = (string)root[i]["exchangeId"];
-                string baseId = (string)root[i]["baseId"];
-                string quoteId = (string)root[i]["quoteId"];
-                string baseSymbol = (string)root[i]["baseSymbol"];
-                string quoteSymbol = (string)root[i]["quoteSymbol"];
-                double volumeUsd24Hr = (double)root[i]["volumeUsd24Hr"];
-                double priceUsd = (double)root[i]["priceUsd"];
-                double volumePercent = (double)root[i]["volumePercent"];
-                cryptoMarkets[i] = new CryptoMarket(exchangeId,baseId,quoteId,baseSymbol,quoteSymbol,volumeUsd24Hr,priceUsd,volumePercent);
-            }
+            CryptoMarket[] cryptoMarkets = new CryptoMarket[1];
+                string exchangeId = (string)root[0]["exchangeId"];
+                string baseId = (string)root[0]["baseId"];
+                string quoteId = (string)root[0]["quoteId"];
+                string baseSymbol = (string)root[0]["baseSymbol"];
+                string quoteSymbol = (string)root[0]["quoteSymbol"];
+                double volumeUsd24Hr = (double)root[0]["volumeUsd24Hr"];
+                double priceUsd = (double)root[0]["priceUsd"];
+                double volumePercent = (double)root[0]["volumePercent"];
+                cryptoMarkets[0] = new CryptoMarket(exchangeId,baseId,quoteId,baseSymbol,quoteSymbol,volumeUsd24Hr,priceUsd,volumePercent);
             return cryptoMarkets;
         }
 

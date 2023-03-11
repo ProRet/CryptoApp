@@ -11,7 +11,7 @@ namespace CryptoApp.ViewModel.ViewModels
 
        public TopCryptocurrenciesViewModel()
         {  
-            CryptoCoins.FillCryptoCoins();
+            CryptoCoins.FillCryptoCoins(10);
         }
     }
 }

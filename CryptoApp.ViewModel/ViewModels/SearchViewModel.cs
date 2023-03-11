@@ -1,16 +1,16 @@
 ﻿using CryptoApp.Extentions.Extensions;
-using CryptoApp.Models.Models;
+using CryptoApp.Models;
 using System.Collections.ObjectModel;
 
 namespace CryptoApp.ViewModel.ViewModels
 {
     public class SearchViewModel
     {
-        public ObservableCollection<CryptoMarket> cryptoMarket { get; }=new ObservableCollection<CryptoMarket>();
+        public ObservableCollection<CryptoCoin> cryptoCoins { get; }=new ObservableCollection<CryptoCoin>();
 
-        public SearchViewModel(string coin)
+        public SearchViewModel()
         {
-            cryptoMarket.FillCryptoMarkets(coin);
+            cryptoCoins.FillCryptoCoins();
         }
     }
 }
