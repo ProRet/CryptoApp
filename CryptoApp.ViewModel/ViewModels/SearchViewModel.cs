@@ -14,11 +14,12 @@ namespace CryptoApp.ViewModel.ViewModels
 
         private string name;
 
-        private ObservableCollection<CryptoCoin> foundCoin;
+        private ObservableCollection<CryptoCoin> foundCoin ;
 
         public SearchViewModel()
         {
             CryptoCoins.FillCryptoCoins();
+            foundCoin = new ObservableCollection<CryptoCoin>();
         }
 
 
