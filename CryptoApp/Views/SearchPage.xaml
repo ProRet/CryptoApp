@@ -22,7 +22,7 @@
                 <SymbolIcon Symbol="Zoom" />
             </StackPanel>
             <Grid Grid.Row="0" Grid.Column="1" x:Name="SearchBar">
-                <AutoSuggestBox Text="{x:Bind viewModel.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="30 0 40 0" FontSize="20" Width="690" BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBox Text="{x:Bind viewModel.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="30 0 40 0" FontSize="20" Width="690" BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
         </Grid>
     </Grid>
