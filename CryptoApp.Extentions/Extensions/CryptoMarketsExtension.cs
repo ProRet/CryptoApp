@@ -11,7 +11,7 @@ namespace CryptoApp.Extentions.Extensions
         {
             var cryptomarkets = await CoinCapService.Instance.GetCryptoMarketsAsync(coin);
 
-            cryptoMarkets.AddRange(cryptomarkets);
+            cryptoMarkets.Add(cryptomarkets);
         }
 
     }
