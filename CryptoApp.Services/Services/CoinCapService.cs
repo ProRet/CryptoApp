@@ -66,12 +66,8 @@ namespace CryptoApp.Services
             CryptoMarket cryptoMarkets = new CryptoMarket();
                 string exchangeId = (string)root.SelectToken("exchangeId");
                 string baseId = (string)root.SelectToken("baseId");
-                string quoteId = (string)root.SelectToken("quoteId");
-                string baseSymbol = (string)root.SelectToken("baseSymbol");
-                double volumeUsd24Hr = (double)root.SelectToken("volumeUsd24Hr");
-                double priceUsd = (double)root.SelectToken("priceUsd");
-                double volumePercent = (double)root.SelectToken("volumePercent");
-                cryptoMarkets = new CryptoMarket(exchangeId,baseId,quoteId,baseSymbol,volumeUsd24Hr,priceUsd,volumePercent);
+                double priceUsd = (double)root.SelectToken("priceUsd");    
+                cryptoMarkets = new CryptoMarket(exchangeId,baseId,priceUsd);
             return cryptoMarkets;
         }
 
