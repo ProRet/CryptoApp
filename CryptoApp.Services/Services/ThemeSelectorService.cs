@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
+
 
 namespace CryptoApp.Services.Services
 {
@@ -16,17 +14,12 @@ namespace CryptoApp.Services.Services
 
         public static ElementTheme Theme { get; set; } = ElementTheme.Default;
 
-        public static async Task InitializeAsync()
-        {
-            Theme = await LoadThemeFromSettingsAsync();
-        }
-
         public static async Task SetThemeAsync(ElementTheme theme)
         {
             Theme = theme;
 
             await SetRequestedThemeAsync();
-            await SaveThemeInSettingsAsync(Theme);
+            
         }
 
         public static async Task SetRequestedThemeAsync()

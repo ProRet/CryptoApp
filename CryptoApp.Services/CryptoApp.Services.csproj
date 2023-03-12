@@ -123,6 +123,7 @@
     <Compile Include="Services\CoinCapService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FoundCoinsService.cs" />
+    <Compile Include="Services\JsonService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
     <EmbeddedResource Include="Properties\CryptoApp.Services.rd.xml" />
   </ItemGroup>

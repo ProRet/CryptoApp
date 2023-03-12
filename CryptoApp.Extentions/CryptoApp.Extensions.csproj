@@ -125,6 +125,8 @@
     <Compile Include="Extensions\DetailedCryptoInfoExtesion.cs" />
     <Compile Include="Extensions\ObservableCollectionExtention.cs" />
     <Compile Include="Extensions\SearchViewModelExtension.cs" />
+    <Compile Include="Extensions\SettingsExtension.cs" />
+    <Compile Include="Extensions\SettingsStorageExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\CryptoApp.Extentions.rd.xml" />
   </ItemGroup>

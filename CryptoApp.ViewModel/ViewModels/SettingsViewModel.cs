@@ -6,7 +6,7 @@ using Windows.UI.Xaml;
 
 namespace CryptoApp.ViewModel.ViewModels
 {
-    public class SettingsViewModel : ObservableObject
+    public class SettingsViewModel:ObservableObject
     {
         private ElementTheme _elementTheme = ThemeSelectorService.Theme;
         private ICommand _switchThemeCommand;
