@@ -71,7 +71,17 @@ namespace CryptoApp.Services
             return cryptoMarkets;
         }
 
-        
+        public async Task<DetailedCryptoInfo[]> GetDetailedCryptoInfo(int limit=230)
+        {
+            var CryptoCoins = await GetCryptoCoinsAsync();
+            DetailedCryptoInfo[] detailedCryptoInfos = new DetailedCryptoInfo[limit];
+            for (int i = 0; i < limit; i++)
+            {
+                detailedCryptoInfos[i].CryptoCoin = CryptoCoins[i];
+                detailedCryptoInfos[i].CryptoMarket = await GetCryptoMarketsAsync(detailedCryptoInfos[i].CryptoCoin.Id);
+            }
+            return detailedCryptoInfos;
+        }
         
     }
 }
