@@ -141,7 +141,7 @@
       <Name>CryptoApp.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\CryptoApp.Services\CryptoApp.Services.csproj">
-      <Project>{D98A1191-0601-4F64-A036-3718BCEBC823}</Project>
+      <Project>{d98a1191-0601-4f64-a036-3718bcebc823}</Project>
       <Name>CryptoApp.Services</Name>
     </ProjectReference>
   </ItemGroup>

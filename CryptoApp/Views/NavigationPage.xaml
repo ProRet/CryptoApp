@@ -9,8 +9,7 @@
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="White">
+    mc:Ignorable="d">
     
     <i:Interaction.Behaviors>
         <ic:EventTriggerBehavior EventName="Loaded">
@@ -25,13 +24,11 @@
         SelectedItem="{x:Bind RootPageViewModel.Selected, Mode=OneWay}"
         IsSettingsVisible="True"
         Background="Black">
-
         <winui:NavigationView.MenuItems>
-            <winui:NavigationViewItem Icon="Home" Content="Top cryptocurrencies" Foreground="White"  helpers:NavHelper.NavigateTo="local:TopCryptocurrenciesPage"/>
-            <winui:NavigationViewItem Icon="Zoom" Content="Search" Foreground="White"  helpers:NavHelper.NavigateTo="local:SearchPage" />
-            <winui:NavigationViewItem  Content="Crypto info" Icon="AlignLeft" Foreground="White"  helpers:NavHelper.NavigateTo="local:CryptoInfoPage" />
+            <winui:NavigationViewItem Icon="Home" Content="Top cryptocurrencies"   helpers:NavHelper.NavigateTo="local:TopCryptocurrenciesPage"/>
+            <winui:NavigationViewItem Icon="Zoom" Content="Search"   helpers:NavHelper.NavigateTo="local:SearchPage" />
+            <winui:NavigationViewItem  Content="Crypto info" Icon="AlignLeft"   helpers:NavHelper.NavigateTo="local:CryptoInfoPage" />
         </winui:NavigationView.MenuItems>
-
         <i:Interaction.Behaviors>
             <ic:EventTriggerBehavior EventName="ItemInvoked">
                 <ic:InvokeCommandAction Command="{x:Bind RootPageViewModel.ItemInvokedCommand}" />

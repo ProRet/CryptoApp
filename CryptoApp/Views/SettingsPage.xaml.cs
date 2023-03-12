@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryptoApp.ViewModel.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,10 @@ namespace CryptoApp.Views
     /// </summary>
     public sealed partial class SettingsPage : Page
     {
+        public SettingsViewModel viewModel { get; set; } = new SettingsViewModel();
         public SettingsPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }
