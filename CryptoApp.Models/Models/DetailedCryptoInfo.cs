@@ -8,11 +8,27 @@ namespace CryptoApp.Models.Models
 {
     public class DetailedCryptoInfo
     {
-        public CryptoCoin CryptoCoin { get; set; }
-        public CryptoMarket CryptoMarket { get; set; }
-        public DetailedCryptoInfo(CryptoCoin cryptoCoin,CryptoMarket cryptoMarket) { 
-            CryptoCoin = cryptoCoin;
-            CryptoMarket = cryptoMarket;
+        public string Name { get; set; }
+        public double Price { get; set; }
+
+        public double PriceChange { get; set; }
+
+        public double Supply { get; set; }
+
+        public string Market { get; set; }
+
+        public double MarketPrice { get; set; }
+
+        public DetailedCryptoInfo() { }
+
+        public DetailedCryptoInfo(string name, double price, double priceChange,double supply, string market, double marketPrice)
+        {
+            Name = name;
+            Price = price;
+            PriceChange = priceChange;
+            Supply = supply;
+            Market = market;
+            MarketPrice = marketPrice;
         }
     }
 }

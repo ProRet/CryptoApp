@@ -11,10 +11,10 @@ namespace CryptoApp.Extentions.Extensions
 {
     public static class DetailedCryptoInfoExtesion
     {
-        public static async void FillDetailedInfo(this ObservableCollection<DetailedCryptoInfo> detailedCryptoInfos,int limit=230)
+        public static async void FillDetailedInfo(this ObservableCollection<DetailedCryptoInfo> DetailedCryptoInfos,int limit=230)
         {
-           var _detailedCryptoInfos= await CoinCapService.Instance.GetDetailedCryptoInfo(limit);
-            detailedCryptoInfos.AddRange(_detailedCryptoInfos);
+           var _DetailedCryptoInfos= await CoinCapService.Instance.GetDetailedCryptoInfo(limit);
+            DetailedCryptoInfos.AddRange(_DetailedCryptoInfos);
         }
     }
 }

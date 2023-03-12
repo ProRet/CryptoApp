@@ -23,7 +23,7 @@ namespace CryptoApp.Views
     /// </summary>
     public sealed partial class SearchPage : Page
     {
-        public SearchViewModel viewModel = new SearchViewModel();
+        readonly SearchViewModel viewModel = new SearchViewModel();
         public SearchPage()
         {
             InitializeComponent();
