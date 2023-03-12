@@ -77,9 +77,8 @@ namespace CryptoApp.Services
             DetailedCryptoInfo[] detailedCryptoInfos = new DetailedCryptoInfo[limit];
             for (int i = 0; i < limit; i++)
             {
-                
                 CryptoMarket cryptoMarket = await GetCryptoMarketsAsync(CryptoCoins[i].Id);
-                detailedCryptoInfos[i] = new DetailedCryptoInfo(CryptoCoins[i].Name, CryptoCoins[i].PriceUsd, CryptoCoins[i].ChangePercent24Hr, CryptoCoins[i].Supply, cryptoMarket.ExchangeId, cryptoMarket.PriceUsd);
+                detailedCryptoInfos[i] = new DetailedCryptoInfo(CryptoCoins[i].Name, CryptoCoins[i].PriceUsd, CryptoCoins[i].ChangePercent24Hr, CryptoCoins[i].Supply.ToString(), cryptoMarket.ExchangeId, cryptoMarket.PriceUsd);
             }
             return detailedCryptoInfos;
         }

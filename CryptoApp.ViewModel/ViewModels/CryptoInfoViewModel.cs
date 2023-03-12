@@ -10,7 +10,7 @@ namespace CryptoApp.ViewModel.ViewModels
 
         public CryptoInfoViewModel()
         {
-            DetailedCryptoInfos.FillDetailedInfo(10);
+            DetailedCryptoInfos.FillDetailedInfo(20);
         }
         
     }

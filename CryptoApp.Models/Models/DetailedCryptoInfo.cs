@@ -13,7 +13,7 @@ namespace CryptoApp.Models.Models
 
         public double PriceChange { get; set; }
 
-        public double Supply { get; set; }
+        public string Supply { get; set; }
 
         public string Market { get; set; }
 
@@ -21,7 +21,7 @@ namespace CryptoApp.Models.Models
 
         public DetailedCryptoInfo() { }
 
-        public DetailedCryptoInfo(string name, double price, double priceChange,double supply, string market, double marketPrice)
+        public DetailedCryptoInfo(string name, double price, double priceChange,string supply, string market, double marketPrice)
         {
             Name = name;
             Price = price;
