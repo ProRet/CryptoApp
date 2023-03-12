@@ -136,9 +136,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CryptoApp.Helpers\CryptoApp.Helpers.csproj">
+      <Project>{E9F3985A-F374-4D97-AD34-01BE57E836A5}</Project>
+      <Name>CryptoApp.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CryptoApp.Models\CryptoApp.Models.csproj">
       <Project>{F727E6AF-78BE-4608-91B3-F0799753846B}</Project>
       <Name>CryptoApp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CryptoApp.NavigationBehavior\CryptoApp.NavigationBehavior.csproj">
+      <Project>{6A0E6D49-2C95-4F97-A4B4-0203617221FE}</Project>
+      <Name>CryptoApp.NavigationBehavior</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

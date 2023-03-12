@@ -22,14 +22,19 @@
         IsBackButtonVisible="Visible"
         IsBackEnabled="{x:Bind RootPageViewModel.IsBackEnabled, Mode=OneWay}"
         SelectedItem="{x:Bind RootPageViewModel.Selected, Mode=OneWay}"
-        IsSettingsVisible="True"
+        IsSettingsVisible="False"
         Background="Black">
-        
+
         <winui:NavigationView.MenuItems>
             <winui:NavigationViewItem Icon="Home" Content="Top cryptocurrencies"   helpers:NavHelper.NavigateTo="local:TopCryptocurrenciesPage"/>
             <winui:NavigationViewItem Icon="Zoom" Content="Search"   helpers:NavHelper.NavigateTo="local:SearchPage" />
             <winui:NavigationViewItem  Content="Crypto info" Icon="AlignLeft"   helpers:NavHelper.NavigateTo="local:CryptoInfoPage" />
         </winui:NavigationView.MenuItems>
+        
+        <winui:NavigationView.FooterMenuItems>
+            <winui:NavigationViewItem Icon="Setting" Content="Settings" helpers:NavHelper.NavigateTo="local:SettingsPage" Width="320" />
+        </winui:NavigationView.FooterMenuItems>
+        
         <i:Interaction.Behaviors>
             <ic:EventTriggerBehavior EventName="ItemInvoked">
                 <ic:InvokeCommandAction Command="{x:Bind RootPageViewModel.ItemInvokedCommand}" />
