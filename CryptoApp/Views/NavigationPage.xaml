@@ -29,7 +29,7 @@
         <winui:NavigationView.MenuItems>
             <winui:NavigationViewItem Icon="Home" Content="Top cryptocurrencies" Foreground="White"  helpers:NavHelper.NavigateTo="local:TopCryptocurrenciesPage"/>
             <winui:NavigationViewItem Icon="Zoom" Content="Search" Foreground="White"  helpers:NavHelper.NavigateTo="local:SearchPage" />
-            <winui:NavigationViewItem  Content="Crypto info" Icon="Zoom" Foreground="White"  helpers:NavHelper.NavigateTo="local:CryptoInfoPage" />
+            <winui:NavigationViewItem  Content="Crypto info" Icon="AlignLeft" Foreground="White"  helpers:NavHelper.NavigateTo="local:CryptoInfoPage" />
         </winui:NavigationView.MenuItems>
 
         <i:Interaction.Behaviors>

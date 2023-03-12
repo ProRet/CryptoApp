@@ -11,7 +11,7 @@ namespace CryptoApp.Services.Services
         {
             if (Name != "")
             {
-                var _CryptoCoins = CryptoCoins.Where(x => x.Name.Contains(Name));
+                var _CryptoCoins = CryptoCoins.Where(x => x.Name.ToLower().Contains(Name.ToLower()));
                 foreach (var item in _CryptoCoins)
                 {
                     if (item != null)

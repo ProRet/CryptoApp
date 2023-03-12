@@ -38,10 +38,6 @@ namespace CryptoApp.Models
 
         public double ChangePercent24Hr { get; set; }
 
-        
-
-
-
         public CryptoCoin() { }
        public CryptoCoin(string id, int rank, string symbol, string name, double supply, double maxSupply, double marketCapUsd, double volumeUsd24Hr, double priceUsd, double changePercent24Hr)
         {
