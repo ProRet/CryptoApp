@@ -24,6 +24,7 @@
         SelectedItem="{x:Bind RootPageViewModel.Selected, Mode=OneWay}"
         IsSettingsVisible="True"
         Background="Black">
+        
         <winui:NavigationView.MenuItems>
             <winui:NavigationViewItem Icon="Home" Content="Top cryptocurrencies"   helpers:NavHelper.NavigateTo="local:TopCryptocurrenciesPage"/>
             <winui:NavigationViewItem Icon="Zoom" Content="Search"   helpers:NavHelper.NavigateTo="local:SearchPage" />
