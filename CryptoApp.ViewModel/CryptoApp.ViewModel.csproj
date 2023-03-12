@@ -124,6 +124,7 @@
     <Compile Include="ViewModels\CryptoInfoViewModel.cs" />
     <Compile Include="ViewModels\RootPageViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\TopCryptocurrenciesViewModel.cs" />
     <EmbeddedResource Include="Properties\CryptoApp.ViewModel.rd.xml" />
   </ItemGroup>
