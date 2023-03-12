@@ -122,6 +122,7 @@
   <ItemGroup>
     <Compile Include="Extensions\CryptoCoinsExtension.cs" />
     <Compile Include="Extensions\CryptoMarketsExtension.cs" />
+    <Compile Include="Extensions\DetailedCryptoInfoExtesion.cs" />
     <Compile Include="Extensions\ObservableCollectionExtention.cs" />
     <Compile Include="Extensions\SearchViewModelExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

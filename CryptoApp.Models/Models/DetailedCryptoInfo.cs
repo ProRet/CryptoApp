@@ -8,14 +8,11 @@ namespace CryptoApp.Models.Models
 {
     public class DetailedCryptoInfo
     {
-
         public CryptoCoin CryptoCoin { get; }
-
-        public CryptoMarket cryptoMarket { get; }
-        public DetailedCryptoInfo() { 
-        
+        public CryptoMarket CryptoMarket { get; }
+        public DetailedCryptoInfo(CryptoCoin cryptoCoin,CryptoMarket cryptoMarket) { 
+            CryptoCoin = cryptoCoin;
+            CryptoMarket = cryptoMarket;
         }
-
-
     }
 }
