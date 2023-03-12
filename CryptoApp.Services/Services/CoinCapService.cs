@@ -63,7 +63,7 @@ namespace CryptoApp.Services
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
             var root = JObject.Parse(json)["data"][0];
-            CryptoMarket cryptoMarkets = new CryptoMarket();
+            CryptoMarket cryptoMarkets;
                 string exchangeId = (string)root.SelectToken("exchangeId");
                 string baseId = (string)root.SelectToken("baseId");
                 double priceUsd = (double)root.SelectToken("priceUsd");    
