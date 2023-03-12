@@ -8,7 +8,7 @@
     xmlns:vm="using:CryptoApp.ViewModel.ViewModels"
     xmlns:models="using:CryptoApp.Models" 
     mc:Ignorable="d"
-    Background="Orange">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
         <Grid>
@@ -60,9 +60,9 @@
                         <DataTemplate x:DataType="models:CryptoCoin">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="150"/>
-                                    <ColumnDefinition Width="250"/>
-                                    <ColumnDefinition Width="180"/>
+                                    <ColumnDefinition Width="170"/>
+                                    <ColumnDefinition Width="230"/>
+                                    <ColumnDefinition Width="200"/>
                                     <ColumnDefinition Width="220"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Margin="0 20 0 20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Text="{Binding Rank}"></TextBlock>
