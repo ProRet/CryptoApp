@@ -20,7 +20,6 @@ namespace CryptoApp.ViewModel.ViewModels
             foundCoins = new ObservableCollection<CryptoCoin>();
         }
 
-
         public ObservableCollection<CryptoCoin> FoundCoins
         {
             get => foundCoins;
