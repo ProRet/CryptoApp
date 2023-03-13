@@ -10,26 +10,23 @@ namespace CryptoApp.ViewModel.ViewModels
     {
         public ObservableCollection<CryptoCoin> CryptoCoins { get; }=new ObservableCollection<CryptoCoin>();
 
-        public ObservableCollection<CryptoCoin> cryptoCoin { get; }= new ObservableCollection<CryptoCoin>();
-
         private string name;
 
-        private ObservableCollection<CryptoCoin> foundCoin ;
+        private ObservableCollection<CryptoCoin> foundCoins ;
 
         public SearchViewModel()
         {
             CryptoCoins.FillCryptoCoins();
-            foundCoin = new ObservableCollection<CryptoCoin>();
+            foundCoins = new ObservableCollection<CryptoCoin>();
         }
 
 
         public ObservableCollection<CryptoCoin> FoundCoins
         {
-            get => foundCoin;
+            get => foundCoins;
             set
             {
-                foundCoin = value;
-                OnPropertyChanged(nameof(FoundCoins));
+                foundCoins = value;
             }
         }
 
