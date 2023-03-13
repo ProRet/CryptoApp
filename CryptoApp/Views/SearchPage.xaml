@@ -35,24 +35,24 @@
                 <ColumnDefinition Width="0.25*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0" Grid.Column="0">
-                <Border BorderBrush="Black" BorderThickness="0 1 1 1">
+                <Border BorderBrush="Black" BorderThickness="0 1 1 1" CornerRadius="10">
                     <TextBlock Text="Rank" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
 
                     </TextBlock>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="1">
-                <Border BorderBrush="Black" BorderThickness="0 1 1 1">
+                <Border BorderBrush="Black" BorderThickness="0 1 1 1" CornerRadius="10">
                     <TextBlock Text="Symbol" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="2">
-                <Border BorderBrush="Black" BorderThickness="0 1 1 1">
+                <Border BorderBrush="Black" BorderThickness="0 1 1 1" CornerRadius="10">
                     <TextBlock Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="3">
-                <Border BorderBrush="Black" BorderThickness="0 1 1 1">
+                <Border BorderBrush="Black" BorderThickness="0 1 1 1" CornerRadius="10">
                     <TextBlock Text="Price usd" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                 </Border>
             </Grid>
