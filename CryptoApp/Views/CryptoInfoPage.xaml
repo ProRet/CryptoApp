@@ -24,27 +24,27 @@
                 <ColumnDefinition Width="0.1*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0" Grid.Column="0">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
             <TextBlock  FontSize="14" Text="Name" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="1">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
                     <TextBlock  FontSize="14" Text="Price (usd)" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="2">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
                     <TextBlock  FontSize="14" Text="Percentage price changes" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="3">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
                     <TextBlock  FontSize="14" Text="Supply" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="4">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
                     <TextBlock  FontSize="14" Text="Market" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Border>
             </Grid>
@@ -56,12 +56,11 @@
 
         </Grid>
         <Grid Grid.Row="1">
+            <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" Margin="0 3 0 0" BorderThickness="2" CornerRadius="10">
             <ListView ItemsSource="{x:Bind viewModel.DetailedCryptoInfos}" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="2" CornerRadius="10">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="IsHitTestVisible" Value="False"/>
-                        <Setter Property="BorderBrush" Value="Gray"/>
-                        <Setter Property="BorderThickness" Value="1"/>
                     </Style>
                 </ListView.ItemContainerStyle>
                 <ListView.ItemTemplate>
@@ -71,9 +70,9 @@
                                 <ColumnDefinition Width="120"/>
                                 <ColumnDefinition Width="120"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="120"/>
-                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="130"/>
+                                <ColumnDefinition Width="130"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Margin="0 20 0 20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Text="{Binding Name}"></TextBlock>
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Text="{Binding Price}"></TextBlock>
@@ -85,6 +84,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </Border>
         </Grid>
     </Grid>
 </Page>

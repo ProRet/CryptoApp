@@ -18,7 +18,7 @@
             x:Name="ContentArea">
             <StackPanel>
 
-                <TextBlock FontSize="20" Text="Choose an application theme" Width="645" HorizontalAlignment="Left"/>
+                <TextBlock Margin="0 0 0 20" FontSize="30" Text="Choose an application theme" Width="645" HorizontalAlignment="Left"/>
                 <StackPanel>
                     <RadioButton
                         x:Uid="Settings_Theme_Light"

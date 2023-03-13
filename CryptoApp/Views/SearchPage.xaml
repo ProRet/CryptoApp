@@ -35,19 +35,18 @@
                 <ColumnDefinition Width="0.25*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0" Grid.Column="0">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
-                    <TextBlock Text="Rank" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
-
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                    <TextBlock  Text="Rank" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
                     </TextBlock>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="1">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
                     <TextBlock Text="Symbol" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                 </Border>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="2">
-                <Border BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
+                <Border Margin="0 0 3 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="1 1 1 1" CornerRadius="10">
                     <TextBlock Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
                 </Border>
             </Grid>
@@ -58,12 +57,12 @@
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
+            <Border Margin="0 3 0 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" BorderThickness="2" CornerRadius="10">
                 <ListView ItemsSource="{x:Bind viewModel.FoundCoins}" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="2" CornerRadius="10">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="IsHitTestVisible" Value="False"/>
-                            <Setter Property="BorderBrush" Value="Gray"/>
-                            <Setter Property="BorderThickness" Value="1"/>
+                            
                         </Style>
                     </ListView.ItemContainerStyle>
                     <ListView.ItemTemplate>
@@ -83,6 +82,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+            </Border>
             </Grid>
         </Grid>
     
