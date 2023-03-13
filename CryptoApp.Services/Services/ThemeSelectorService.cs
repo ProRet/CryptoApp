@@ -9,7 +9,7 @@ namespace CryptoApp.Services.Services
 {
     public static class ThemeSelectorService
     {
-        private const string SettingsKey = "AppBackgroundRequestedTheme";
+        
 
         public static ElementTheme Theme { get; set; } = ElementTheme.Default;
 

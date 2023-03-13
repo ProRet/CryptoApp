@@ -58,7 +58,7 @@
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
-                <ListView ItemsSource="{x:Bind viewModel.FoundCoins}" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <ListView ItemsSource="{x:Bind viewModel.FoundCoins}" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="2" CornerRadius="10">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="IsHitTestVisible" Value="False"/>

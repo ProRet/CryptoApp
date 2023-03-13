@@ -48,7 +48,7 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="1">
-                <ListView ItemsSource="{x:Bind viewModel.CryptoCoins}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ListView ItemsSource="{x:Bind viewModel.CryptoCoins}" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="2" CornerRadius="10" >
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="IsHitTestVisible" Value="False"/>
