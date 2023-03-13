@@ -195,10 +195,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CryptoApp.Converters\CryptoApp.Converters.csproj">
-      <Project>{b4a3bad1-d000-416d-b1c6-172aba0220ed}</Project>
-      <Name>CryptoApp.Converters</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CryptoApp.Helpers\CryptoApp.Helpers.csproj">
       <Project>{e9f3985a-f374-4d97-ad34-01be57e836a5}</Project>
       <Name>CryptoApp.Helpers</Name>
