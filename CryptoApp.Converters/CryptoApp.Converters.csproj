@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57ADADF2-1B17-4CC4-AF90-433D2A36DA8A}</ProjectGuid>
+    <ProjectGuid>{B4A3BAD1-D000-416D-B1C6-172ABA0220ED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CryptoApp.Extentions</RootNamespace>
-    <AssemblyName>CryptoApp.Extentions</AssemblyName>
+    <RootNamespace>CryptoApp.Converters</RootNamespace>
+    <AssemblyName>CryptoApp.Converters</AssemblyName>
     <DefaultLanguage>ru-RU</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
@@ -120,29 +120,14 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Extensions\CryptoCoinsExtension.cs" />
-    <Compile Include="Extensions\CryptoMarketsExtension.cs" />
-    <Compile Include="Extensions\DetailedCryptoInfoExtesion.cs" />
-    <Compile Include="Extensions\ObservableCollectionExtention.cs" />
-    <Compile Include="Extensions\SearchViewModelExtension.cs" />
-    <Compile Include="Extensions\SettingsExtension.cs" />
+    <Compile Include="Converters\EnumToBoleanConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\CryptoApp.Extentions.rd.xml" />
+    <EmbeddedResource Include="Properties\CryptoApp.Converters.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CryptoApp.Models\CryptoApp.Models.csproj">
-      <Project>{F727E6AF-78BE-4608-91B3-F0799753846B}</Project>
-      <Name>CryptoApp.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CryptoApp.Services\CryptoApp.Services.csproj">
-      <Project>{d98a1191-0601-4f64-a036-3718bcebc823}</Project>
-      <Name>CryptoApp.Services</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

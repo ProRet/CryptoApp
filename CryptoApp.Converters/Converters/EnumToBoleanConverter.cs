@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Data;
 
-namespace CryptoApp.Helpers.Helpers
+namespace CryptoApp.Converters.Converters
 {
-    public class EnumToBoleanHelper : IValueConverter
+    public class EnumToBoleanConverter : IValueConverter
     {
         public Type EnumType { get; set; }
 

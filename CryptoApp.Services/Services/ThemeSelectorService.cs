@@ -5,7 +5,6 @@ using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 
-
 namespace CryptoApp.Services.Services
 {
     public static class ThemeSelectorService
@@ -19,7 +18,6 @@ namespace CryptoApp.Services.Services
             Theme = theme;
 
             await SetRequestedThemeAsync();
-            
         }
 
         public static async Task SetRequestedThemeAsync()
@@ -35,43 +33,7 @@ namespace CryptoApp.Services.Services
                 });
             }
         }
-        public static async Task<T> ReadAsync<T>(this ApplicationDataContainer settings, string key)
-        {
-            object obj = null;
 
-            if (settings.Values.TryGetValue(key, out obj))
-            {
-                return await JsonService.ToObjectAsync<T>((string)obj);
-            }
-
-            return default;
-        }
-
-        public static async Task SaveAsync<T>(this ApplicationDataContainer settings, string key, T value)
-        {
-            settings.SaveString(key, await JsonService.StringifyAsync(value));
-        }
-        public static void SaveString(this ApplicationDataContainer settings, string key, string value)
-        {
-            settings.Values[key] = value;
-        }
-
-        private static async Task<ElementTheme> LoadThemeFromSettingsAsync()
-        {
-            ElementTheme cacheTheme = ElementTheme.Default;
-            string themeName = await ApplicationData.Current.LocalSettings.ReadAsync<string>(SettingsKey);
-
-            if (!string.IsNullOrEmpty(themeName))
-            {
-                Enum.TryParse(themeName, out cacheTheme);
-            }
-
-            return cacheTheme;
-        }
-
-        private static async Task SaveThemeInSettingsAsync(ElementTheme theme)
-        {
-            await ApplicationData.Current.LocalSettings.SaveAsync(SettingsKey, theme.ToString());
-        }
+     
     }
 }
